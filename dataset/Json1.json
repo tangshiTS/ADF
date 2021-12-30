@@ -1,0 +1,130 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "mydataflow.json",
+				"container": "tangshiadf"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
+				"version": {
+					"type": "string"
+				},
+				"culture": {
+					"type": "string"
+				},
+				"modifiedTime": {
+					"type": "string"
+				},
+				"pbi:mashup": {
+					"type": "object",
+					"properties": {
+						"fastCombine": {
+							"type": "boolean"
+						},
+						"allowNativeQueries": {
+							"type": "boolean"
+						},
+						"skipAutomaticHeaderAndTypeDetection": {
+							"type": "boolean"
+						},
+						"queriesMetadata": {
+							"type": "object",
+							"properties": {
+								"SalesLT vGetAllCategories": {
+									"type": "object",
+									"properties": {
+										"queryId": {
+											"type": "string"
+										},
+										"queryName": {
+											"type": "string"
+										},
+										"loadEnabled": {
+											"type": "boolean"
+										}
+									}
+								}
+							}
+						},
+						"document": {
+							"type": "string"
+						}
+					}
+				},
+				"annotations": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"value": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"entities": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"$type": {
+								"type": "string"
+							},
+							"name": {
+								"type": "string"
+							},
+							"description": {
+								"type": "string"
+							},
+							"pbi:refreshPolicy": {
+								"type": "object",
+								"properties": {
+									"$type": {
+										"type": "string"
+									},
+									"location": {
+										"type": "string"
+									}
+								}
+							},
+							"attributes": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"name": {
+											"type": "string"
+										},
+										"dataType": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
